@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Manager</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Manager</h1>
+        <div class="input-section">
+            <label for="amount">Amount (₹):</label>
+            <input type="number" id="amount" class="input-field">
+            <label for="type">Type:</label>
+            <select id="type" class="input-field">
+                <option value="">Select Type</option>
+                <option value="expense">Expense</option>
+                <option value="income">Income</option>
+            </select>
+            <label for="category" id="categoryLabel" class="hidden">Category:</label>
+            <select id="category" class="input-field hidden">
+                <option value="">Select Type First</option>
+            </select>
+            <button class="add-button" onclick="addTransaction()">Add</button>
+        </div>
+        <div class="result-section">
+            <div class="result" id="income">Total Income: ₹0.00</div>
+            <div class="result" id="expense">Total Expense: ₹0.00</div>
+            <button class="check-button" onclick="checkWeeklyExpenses()">Check Weekly Expenses</button>
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
